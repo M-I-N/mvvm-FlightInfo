@@ -32,3 +32,7 @@ extension UIColor {
 		return UIColor(red: 169.0 / 255.0, green: 159.0 / 255.0, blue: 177.0 / 255.0, alpha: 1.0)
 	}
 }
+
+// http://matteomanferdini.com/mvvm-pattern-ios-swift/
+// http://matteomanferdini.com/the-correct-way-to-display-lists-in-ios-and-what-many-developers-do-wrong/
+// http://matteomanferdini.com/the-ultimate-course-to-making-professional-ios-apps-bonuses/?referrer-code=7bdb10fbc2
