@@ -21,31 +21,13 @@ class FlightInfoViewController: UIViewController {
             // Fallback on earlier versions
         }
         
-        // Create data
-		let flight = createFlight()
-        let flights = Array(repeating: flight, count: 10)
+        // Retrieve flights data from Model controller
+        let flights = FlightDataController().flights
         let flightTableViewDataSource = FlightTableViewDataSource(flights: flights)
         flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
         
         flightTableView.estimatedRowHeight = 260
         flightTableView.rowHeight = UITableViewAutomaticDimension
-	}
-}
-
-private extension FlightInfoViewController {
-	func createFlight() -> Flight {
-		return Flight(
-			airline: "Aeroflot",
-			number: "AF 3245",
-			departure: Endpoint(
-				date: Date(),
-				airport: Airport(symbol: "AMS", name: "Schipol", city: "Amsterdam")
-			),
-			arrival: Endpoint(
-				date: Date().addingTimeInterval(3 * 60 * 60 + 10 * 60),
-				airport: Airport(symbol: "SVO", name: "Sheremetyevo", city: "Moscow")
-			)
-		)
 	}
 }
 
