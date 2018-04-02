@@ -29,3 +29,47 @@ struct Flight {
 		return arrival.date.timeIntervalSince(departure.date)
 	}
 }
+/*
+[
+    {
+        "airline": "",
+        "number": "",
+        "departure": {
+            "date": "",
+            "airport": {
+                "symbol": "",
+                "name": "",
+                "city": ""
+            }
+        },
+        "arrival": {
+            "date": "",
+            "airport": {
+                "symbol": "",
+                "name": "",
+                "city": ""
+            }
+        }
+    },
+    {
+        "airline": "",
+        "number": "",
+        "departure": {
+            "date": "",
+            "airport": {
+                "symbol": "",
+                "name": "",
+                "city": ""
+            }
+        },
+        "arrival": {
+            "date": "",
+            "airport": {
+                "symbol": "",
+                "name": "",
+                "city": ""
+            }
+        }
+    }
+]
+*/
