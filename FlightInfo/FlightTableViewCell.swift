@@ -38,7 +38,10 @@ extension FlightTableViewCell {
 }
 
 extension FlightTableViewCell.ViewModel {
+
+    /// Use this only when you need to test a cell
     init() {
-        flight = Flight(airline: "", number: "", departure: Endpoint(date: Date(), airport: Airport(symbol: "", name: "", city: "")) , arrival: Endpoint(date: Date(), airport: Airport(symbol: "", name: "", city: "")))
+        let notAMeaningfulDate = Date(timeIntervalSinceReferenceDate: 1.0)    // A convenience reference date
+        flight = Flight(airline: "ABC Airline", number: "ABC 12345", departure: Endpoint(date: notAMeaningfulDate, airport: Airport(symbol: "DEP", name: "Departure Airport", city: "Departure City")) , arrival: Endpoint(date: notAMeaningfulDate, airport: Airport(symbol: "ARR", name: "Arrival Airport", city: "Arrival City")))
     }
 }

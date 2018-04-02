@@ -9,20 +9,26 @@
 import UIKit
 
 class FlightInfoViewController: UIViewController {
-	private weak var cardView: FlightCardView!
     @IBOutlet private weak var flightTableView: FlightTableView!
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
+
+        // Navigation bar modification
+        if #available(iOS 11.0, *) {
+            self.navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        // Create data
 		let flight = createFlight()
-//        cardView.viewModel = FlightCardView.ViewModel(flight: flight)
         let flights = Array(repeating: flight, count: 10)
         let flightTableViewDataSource = FlightTableViewDataSource(flights: flights)
         flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
         
-        flightTableView.estimatedRowHeight = 113
+        flightTableView.estimatedRowHeight = 260
         flightTableView.rowHeight = UITableViewAutomaticDimension
-//        flightTableView.reloadData()
 	}
 }
 
@@ -37,7 +43,7 @@ private extension FlightInfoViewController {
 			),
 			arrival: Endpoint(
 				date: Date().addingTimeInterval(3 * 60 * 60 + 10 * 60),
-				airport: Airport(symbol: "SVO", name: "Shere", city: "Moscow")
+				airport: Airport(symbol: "SVO", name: "Sheremetyevo", city: "Moscow")
 			)
 		)
 	}

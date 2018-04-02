@@ -18,6 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		UINavigationBar.appearance().barTintColor = .electricViolet
 		UINavigationBar.appearance().isTranslucent = false
 		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
+        if #available(iOS 11.0, *) {
+            UINavigationBar.appearance().largeTitleTextAttributes =
+                [NSAttributedStringKey.foregroundColor:UIColor.white,
+                 NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 30)]
+        } else {
+            // Fallback on earlier versions
+        }
+        
 		return true
 	}
 
