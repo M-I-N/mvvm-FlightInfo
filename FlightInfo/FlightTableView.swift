@@ -17,8 +17,8 @@ class FlightTableView: UITableView {
 
     var viewModel: ViewModel? {
         didSet{
-            self.dataSource = viewModel?.dataSource
             DispatchQueue.main.async {
+                self.dataSource = self.viewModel?.dataSource
                 self.reloadData()
             }
         }
