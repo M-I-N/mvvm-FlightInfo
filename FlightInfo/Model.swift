@@ -8,18 +8,18 @@
 
 import Foundation
 
-struct Airport {
+struct Airport: Codable {
 	let symbol: String
 	let name: String
 	let city: String
 }
 
-struct Endpoint {
+struct Endpoint: Codable {
 	let date: Date
 	let airport: Airport
 }
 
-struct Flight {
+struct Flight: Codable {
 	let airline: String
 	let number: String
 	let departure: Endpoint
@@ -29,47 +29,7 @@ struct Flight {
 		return arrival.date.timeIntervalSince(departure.date)
 	}
 }
-/*
-[
-    {
-        "airline": "",
-        "number": "",
-        "departure": {
-            "date": "",
-            "airport": {
-                "symbol": "",
-                "name": "",
-                "city": ""
-            }
-        },
-        "arrival": {
-            "date": "",
-            "airport": {
-                "symbol": "",
-                "name": "",
-                "city": ""
-            }
-        }
-    },
-    {
-        "airline": "",
-        "number": "",
-        "departure": {
-            "date": "",
-            "airport": {
-                "symbol": "",
-                "name": "",
-                "city": ""
-            }
-        },
-        "arrival": {
-            "date": "",
-            "airport": {
-                "symbol": "",
-                "name": "",
-                "city": ""
-            }
-        }
-    }
-]
-*/
+
+struct FlightContainer: Codable {
+    let flights: [Flight]
+}

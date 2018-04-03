@@ -10,10 +10,17 @@ import UIKit
 
 class FlightTableView: UITableView {
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.separatorStyle = .none
+    }
+
     var viewModel: ViewModel? {
         didSet{
             self.dataSource = viewModel?.dataSource
-            self.reloadData()
+            DispatchQueue.main.async {
+                self.reloadData()
+            }
         }
     }
 

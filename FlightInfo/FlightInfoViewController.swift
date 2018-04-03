@@ -20,12 +20,16 @@ class FlightInfoViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
-        
-        // Retrieve flights data from Model controller
-        let flights = FlightDataController().flights
-        let flightTableViewDataSource = FlightTableViewDataSource(flights: flights)
-        flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
-        
+
+        // Retrieve flights data from API
+        FlightDataController.downloadFlightInfo { [weak self] (flights, error) in
+            guard let `self` = self else {
+                return
+            }
+            let flightTableViewDataSource = FlightTableViewDataSource(flights: flights)
+            self.flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
+        }
+
         flightTableView.estimatedRowHeight = 260
         flightTableView.rowHeight = UITableViewAutomaticDimension
 	}
