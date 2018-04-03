@@ -25,7 +25,7 @@ class FlightCardView: UIView {
 			departureAirportLabel.text = viewModel.departureAirport
 			airlineLabel.text = viewModel.airline
 			flightNumberLabel.text = viewModel.flightNumber
-			durationLabel.text = viewModel.duration
+			durationLabel.attributedText = viewModel.durationAttributedText
 			arrivalDayLabel.text = viewModel.arrivalDay
 			arrivalAirportLabel.text = viewModel.arrivalAirport
 		}
@@ -42,6 +42,7 @@ extension FlightCardView {
 		let duration: String
 		let arrivalDay: String
 		let arrivalAirport: String
+        let isDurationLong: Bool
 	}
 }
 
@@ -57,6 +58,7 @@ extension FlightCardView.ViewModel {
 		duration = flight.duration.formatted
 		arrivalDay = arrival.date.day
 		arrivalAirport = arrival.timeAndAirport
+        isDurationLong = flight.duration > 4 * 60 * 60  // If duration is > 4 hrs. then we consider it as long duration
 	}
 	
 	init() {
@@ -68,7 +70,20 @@ extension FlightCardView.ViewModel {
 		duration = ""
 		arrivalDay = ""
 		arrivalAirport = ""
+        isDurationLong = false  // by default, duration isn't long
 	}
+
+    /// Makes attributed text for duration depending on the duration range
+    var durationAttributedText: NSAttributedString {
+        let color: UIColor
+        if isDurationLong {
+            color = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        } else {
+            color = #colorLiteral(red: 0.7208544016, green: 0.6881199479, blue: 0.7474190593, alpha: 1)
+        }
+        let attributedString = NSAttributedString(string: duration, attributes: [NSAttributedStringKey.foregroundColor : color])
+        return attributedString
+    }
 }
 
 extension TimeInterval {

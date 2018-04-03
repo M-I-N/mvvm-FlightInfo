@@ -45,3 +45,5 @@ extension UIColor {
 // http://matteomanferdini.com/mvvm-pattern-ios-swift/
 // http://matteomanferdini.com/the-correct-way-to-display-lists-in-ios-and-what-many-developers-do-wrong/
 // http://matteomanferdini.com/the-ultimate-course-to-making-professional-ios-apps-bonuses/?referrer-code=7bdb10fbc2
+
+// https://blog.lickability.com/our-view-on-view-models-4bb1d0675038
