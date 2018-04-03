@@ -12,8 +12,11 @@ class FlightTableViewCell: UITableViewCell {
     
     @IBOutlet private weak var cardView: FlightCardView!
     
-    var viewModel: ViewModel = ViewModel() {
+    var viewModel: ViewModel? {
         didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
             cardView.viewModel = FlightCardView.ViewModel(flight: viewModel.flight)
         }
     }
@@ -34,14 +37,5 @@ class FlightTableViewCell: UITableViewCell {
 extension FlightTableViewCell {
     struct ViewModel {
         let flight: Flight
-    }
-}
-
-extension FlightTableViewCell.ViewModel {
-
-    /// Use this only when you need to test a cell
-    init() {
-        let notAMeaningfulDate = Date(timeIntervalSinceReferenceDate: 1.0)    // A convenience reference date
-        flight = Flight(airline: "ABC Airline", number: "ABC 12345", departure: Endpoint(date: notAMeaningfulDate, airport: Airport(symbol: "DEP", name: "Departure Airport", city: "Departure City")) , arrival: Endpoint(date: notAMeaningfulDate, airport: Airport(symbol: "ARR", name: "Arrival Airport", city: "Arrival City")))
     }
 }

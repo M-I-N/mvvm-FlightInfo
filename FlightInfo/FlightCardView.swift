@@ -18,8 +18,11 @@ class FlightCardView: UIView {
 	@IBOutlet private weak var arrivalDayLabel: UILabel!
 	@IBOutlet private weak var arrivalAirportLabel: UILabel!
 	
-	var viewModel: ViewModel = ViewModel() {
+	var viewModel: ViewModel? {
 		didSet {
+            guard let viewModel = viewModel else {
+                return
+            }
 			airportSymbolsLabel.text = viewModel.airportSymbols
 			departureDayLabel.text = viewModel.departureDay
 			departureAirportLabel.text = viewModel.departureAirport
@@ -60,18 +63,6 @@ extension FlightCardView.ViewModel {
         durationColor = flight.duration > 4 * 60 * 60 ? #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) : #colorLiteral(red: 0.7208544016, green: 0.6881199479, blue: 0.7474190593, alpha: 1)   // If duration is > 4 hrs. then color duration label as long duration
 		arrivalDay = arrival.date.day
 		arrivalAirport = arrival.timeAndAirport
-	}
-	
-	init() {
-		airportSymbols = ""
-		departureDay = ""
-		departureAirport = ""
-		airline = ""
-		flightNumber = ""
-		duration = ""
-		arrivalDay = ""
-		arrivalAirport = ""
-        durationColor = #colorLiteral(red: 0.7208544016, green: 0.6881199479, blue: 0.7474190593, alpha: 1)     // Defult color for duration label
 	}
 }
 

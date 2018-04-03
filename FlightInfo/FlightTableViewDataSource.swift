@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 /// Subclass of NSObject. Responsible for the data source of FlightTableView
 class FlightTableViewDataSource: NSObject {
     let flights: [Flight]
