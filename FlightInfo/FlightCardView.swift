@@ -60,7 +60,7 @@ extension FlightCardView.ViewModel {
 		airline = flight.airline
 		flightNumber = flight.number
 		duration = flight.duration.formatted
-        durationColor = flight.duration > 4 * 60 * 60 ? #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) : #colorLiteral(red: 0.7208544016, green: 0.6881199479, blue: 0.7474190593, alpha: 1)   // If duration is > 4 hrs. then color duration label as long duration
+        durationColor = flight.durationType == .long ? #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) : #colorLiteral(red: 0.7208544016, green: 0.6881199479, blue: 0.7474190593, alpha: 1)    // For long duration, use different color
 		arrivalDay = arrival.date.day
 		arrivalAirport = arrival.timeAndAirport
 	}
