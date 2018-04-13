@@ -11,9 +11,12 @@ import Foundation
 protocol APIResource {
     var base: String { get }
     var path: String { get }
-    var apiKey: String? { get }
+//    var apiKey: String? { get }
 }
 extension APIResource {
+    var apiKey: String? {
+        return nil
+    }
     var urlComponents: URLComponents {
         var components = URLComponents(string: base)!
         components.path = path
@@ -21,5 +24,8 @@ extension APIResource {
 
         return components
     }
-
+    var request: URLRequest {
+        let url = urlComponents.url!
+        return URLRequest(url: url)
+    }
 }
