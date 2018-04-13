@@ -9,9 +9,9 @@
 import Foundation
 
 protocol APIResource {
+    associatedtype Model: Codable
     var base: String { get }
     var path: String { get }
-//    var apiKey: String? { get }
 }
 extension APIResource {
     var apiKey: String? {
@@ -21,7 +21,6 @@ extension APIResource {
         var components = URLComponents(string: base)!
         components.path = path
         components.query = apiKey
-
         return components
     }
     var request: URLRequest {

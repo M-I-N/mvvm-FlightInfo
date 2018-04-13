@@ -9,6 +9,7 @@
 import Foundation
 
 struct FlightsResource: APIResource {
+    typealias Model = FlightContainer
     let base = "http://private-d3a64-flights10.apiary-mock.com"
     let path = "/flight_info"
 }
