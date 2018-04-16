@@ -54,10 +54,10 @@ extension NetworkRequest {
                         let genericModel = try decoder.decode(Model.self, from: data)
                         completion(genericModel, nil)
                     } catch DecodingError.typeMismatch {
-                        completion(nil, APIError.jsonParsingFailure)
+                        completion(nil, .jsonParsingFailure)
                     } catch {
                         print(error.localizedDescription)
-                        completion(nil, APIError.jsonConversionFailure)
+                        completion(nil, .unwantedData)
                     }
                 } else {
                     completion(nil, .invalidData)

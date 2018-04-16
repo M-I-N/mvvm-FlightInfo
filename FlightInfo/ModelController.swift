@@ -17,6 +17,7 @@ class FlightDataController {
                 let flights = flightsContainer.flights
                 completion(flights, nil)
             case .failure(let error):
+                print(error.localizedDescription)
                 completion([], error)
             }
         }
