@@ -22,16 +22,20 @@ class FlightInfoViewController: UIViewController {
         }
 
         // Retrieve flights data from API
-        FlightDataController.downloadFlightInfo { [weak self] (flights, error) in
+        self.fetchFlightsInfo()
+
+        flightTableView.estimatedRowHeight = 260
+        flightTableView.rowHeight = UITableViewAutomaticDimension
+	}
+    
+    func fetchFlightsInfo() {
+        FlightDataController.fetchFlights { [weak self] (flights, error) in
             guard let `self` = self else {
                 return
             }
             let flightTableViewDataSource = FlightTableViewDataSource(flights: flights)
             self.flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
         }
-
-        flightTableView.estimatedRowHeight = 260
-        flightTableView.rowHeight = UITableViewAutomaticDimension
-	}
+    }
 }
 

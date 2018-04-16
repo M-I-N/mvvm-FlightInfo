@@ -15,9 +15,16 @@
 		9519E6321F3729A800EA64E5 /* FlightCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519E6311F3729A800EA64E5 /* FlightCardView.swift */; };
 		95CB8B731F372C340009EA25 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB8B721F372C340009EA25 /* Model.swift */; };
 		AF433A0820723EAE00E6EAE2 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF433A0720723EAE00E6EAE2 /* ModelController.swift */; };
+		AF7D6C082084D09B0053810B /* APIMethodEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D6C072084D09B0053810B /* APIMethodEnum.swift */; };
+		AF92023D2080AFC100FE2EDD /* FlightAPIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92023C2080AFC100FE2EDD /* FlightAPIResource.swift */; };
+		AF92023F2080B58900FE2EDD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92023E2080B58900FE2EDD /* APIError.swift */; };
+		AF9202412080B86A00FE2EDD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9202402080B86A00FE2EDD /* NetworkRequest.swift */; };
+		AF9202432080BA4100FE2EDD /* ResultEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9202422080BA4100FE2EDD /* ResultEnum.swift */; };
+		AF9202482080CD7000FE2EDD /* FlightAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9202442080C79200FE2EDD /* FlightAPIRequest.swift */; };
 		AFBA77CB207134FF00C1DD08 /* FlightTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA77CA207134FF00C1DD08 /* FlightTableView.swift */; };
 		AFBA77CF2071368400C1DD08 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA77CE2071368400C1DD08 /* FlightTableViewCell.swift */; };
 		AFBA77D12071749800C1DD08 /* FlightTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA77D02071749800C1DD08 /* FlightTableViewDataSource.swift */; };
+		AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC2D6B207C86B400ED8081 /* APIResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +39,16 @@
 		95CB8B721F372C340009EA25 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AF251C3E207345C600551A4D /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		AF433A0720723EAE00E6EAE2 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		AF7D6C072084D09B0053810B /* APIMethodEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethodEnum.swift; sourceTree = "<group>"; };
+		AF92023C2080AFC100FE2EDD /* FlightAPIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAPIResource.swift; sourceTree = "<group>"; };
+		AF92023E2080B58900FE2EDD /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		AF9202402080B86A00FE2EDD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		AF9202422080BA4100FE2EDD /* ResultEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultEnum.swift; sourceTree = "<group>"; };
+		AF9202442080C79200FE2EDD /* FlightAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAPIRequest.swift; sourceTree = "<group>"; };
 		AFBA77CA207134FF00C1DD08 /* FlightTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableView.swift; sourceTree = "<group>"; };
 		AFBA77CE2071368400C1DD08 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
 		AFBA77D02071749800C1DD08 /* FlightTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewDataSource.swift; sourceTree = "<group>"; };
+		AFCC2D6B207C86B400ED8081 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +81,8 @@
 		950DAEB71F35D35F001F878E /* FlightInfo */ = {
 			isa = PBXGroup;
 			children = (
+				AF0F6F4F208125AF00D1CC50 /* FlightAPI Network Layer */,
+				AFCC2D6A207C85B200ED8081 /* Common Network Layer */,
 				950DAEBC1F35D35F001F878E /* Main.storyboard */,
 				950DAEBF1F35D35F001F878E /* Assets.xcassets */,
 				950DAEC11F35D35F001F878E /* LaunchScreen.storyboard */,
@@ -82,6 +98,27 @@
 				AF251C3E207345C600551A4D /* PracticePlayground.playground */,
 			);
 			path = FlightInfo;
+			sourceTree = "<group>";
+		};
+		AF0F6F4F208125AF00D1CC50 /* FlightAPI Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				AF92023C2080AFC100FE2EDD /* FlightAPIResource.swift */,
+				AF9202442080C79200FE2EDD /* FlightAPIRequest.swift */,
+			);
+			path = "FlightAPI Network Layer";
+			sourceTree = "<group>";
+		};
+		AFCC2D6A207C85B200ED8081 /* Common Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				AFCC2D6B207C86B400ED8081 /* APIResource.swift */,
+				AF7D6C072084D09B0053810B /* APIMethodEnum.swift */,
+				AF9202402080B86A00FE2EDD /* NetworkRequest.swift */,
+				AF9202422080BA4100FE2EDD /* ResultEnum.swift */,
+				AF92023E2080B58900FE2EDD /* APIError.swift */,
+			);
+			name = "Common Network Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,13 +148,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Pure Creek";
 				TargetAttributes = {
 					950DAEB41F35D35F001F878E = {
 						CreatedOnToolsVersion = 8.3;
 						LastSwiftMigration = 0920;
-                        ProvisioningStyle = Automatic;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -157,14 +194,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7D6C082084D09B0053810B /* APIMethodEnum.swift in Sources */,
+				AF92023D2080AFC100FE2EDD /* FlightAPIResource.swift in Sources */,
 				950DAEBB1F35D35F001F878E /* FlightInfoViewController.swift in Sources */,
 				AFBA77CF2071368400C1DD08 /* FlightTableViewCell.swift in Sources */,
 				AFBA77CB207134FF00C1DD08 /* FlightTableView.swift in Sources */,
 				9519E6321F3729A800EA64E5 /* FlightCardView.swift in Sources */,
 				950DAEB91F35D35F001F878E /* AppDelegate.swift in Sources */,
 				AF433A0820723EAE00E6EAE2 /* ModelController.swift in Sources */,
+				AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */,
 				95CB8B731F372C340009EA25 /* Model.swift in Sources */,
 				AFBA77D12071749800C1DD08 /* FlightTableViewDataSource.swift in Sources */,
+				AF9202412080B86A00FE2EDD /* NetworkRequest.swift in Sources */,
+				AF92023F2080B58900FE2EDD /* APIError.swift in Sources */,
+				AF9202432080BA4100FE2EDD /* ResultEnum.swift in Sources */,
+				AF9202482080CD7000FE2EDD /* FlightAPIRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +248,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -211,6 +256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -260,6 +306,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -267,6 +314,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -301,7 +349,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlightInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.purecreek.FlightInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purecreek.FlightInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -314,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FlightInfo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = com.purecreek.FlightInfo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.purecreek.FlightInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;

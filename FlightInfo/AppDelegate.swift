@@ -45,5 +45,8 @@ extension UIColor {
 // http://matteomanferdini.com/mvvm-pattern-ios-swift/
 // http://matteomanferdini.com/the-correct-way-to-display-lists-in-ios-and-what-many-developers-do-wrong/
 // http://matteomanferdini.com/the-ultimate-course-to-making-professional-ios-apps-bonuses/?referrer-code=7bdb10fbc2
+// http://matteomanferdini.com/network-requests-rest-apis-ios-swift/
+
+// https://medium.com/@jamesrochabrun/protocol-based-generic-networking-using-jsondecoder-and-decodable-in-swift-4-fc9e889e8081
 
 // https://blog.lickability.com/our-view-on-view-models-4bb1d0675038
