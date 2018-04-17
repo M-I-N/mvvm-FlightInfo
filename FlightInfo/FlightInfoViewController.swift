@@ -12,6 +12,7 @@ class FlightInfoViewController: UIViewController {
     @IBOutlet private weak var flightTableView: FlightTableView!
     
     var stateController: StateController!
+    private var dataSource: FlightTableViewDataSource!
     
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -25,10 +26,9 @@ class FlightInfoViewController: UIViewController {
 
         flightTableView.estimatedRowHeight = 260
         flightTableView.rowHeight = UITableViewAutomaticDimension
-        
-        stateController.whenStateDidChange = { (updatedStateController) in
-            let flightTableViewDataSource = FlightTableViewDataSource(flights: updatedStateController.flights)
-            self.flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
+        stateController.whenStateDidChange = { [unowned self] (updatedStateController) in
+            self.dataSource = FlightTableViewDataSource(flights: updatedStateController.flights)
+            self.flightTableView.viewModel = FlightTableView.ViewModel(dataSource: self.dataSource)
         }
         
 	}
