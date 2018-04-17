@@ -14,8 +14,9 @@
 		950DAEC31F35D35F001F878E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950DAEC11F35D35F001F878E /* LaunchScreen.storyboard */; };
 		9519E6321F3729A800EA64E5 /* FlightCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519E6311F3729A800EA64E5 /* FlightCardView.swift */; };
 		95CB8B731F372C340009EA25 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CB8B721F372C340009EA25 /* Model.swift */; };
-		AF433A0820723EAE00E6EAE2 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF433A0720723EAE00E6EAE2 /* ModelController.swift */; };
+		AF433A0820723EAE00E6EAE2 /* StorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF433A0720723EAE00E6EAE2 /* StorageController.swift */; };
 		AF7D6C082084D09B0053810B /* APIMethodEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7D6C072084D09B0053810B /* APIMethodEnum.swift */; };
+		AF905FBF2086231E0028526D /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF905FBE2086231E0028526D /* StateController.swift */; };
 		AF92023D2080AFC100FE2EDD /* FlightAPIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92023C2080AFC100FE2EDD /* FlightAPIResource.swift */; };
 		AF92023F2080B58900FE2EDD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92023E2080B58900FE2EDD /* APIError.swift */; };
 		AF9202412080B86A00FE2EDD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9202402080B86A00FE2EDD /* NetworkRequest.swift */; };
@@ -38,8 +39,9 @@
 		9519E6311F3729A800EA64E5 /* FlightCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCardView.swift; sourceTree = "<group>"; };
 		95CB8B721F372C340009EA25 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AF251C3E207345C600551A4D /* PracticePlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = PracticePlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		AF433A0720723EAE00E6EAE2 /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		AF433A0720723EAE00E6EAE2 /* StorageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageController.swift; sourceTree = "<group>"; };
 		AF7D6C072084D09B0053810B /* APIMethodEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethodEnum.swift; sourceTree = "<group>"; };
+		AF905FBE2086231E0028526D /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		AF92023C2080AFC100FE2EDD /* FlightAPIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightAPIResource.swift; sourceTree = "<group>"; };
 		AF92023E2080B58900FE2EDD /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		AF9202402080B86A00FE2EDD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -93,7 +95,7 @@
 				AFBA77D02071749800C1DD08 /* FlightTableViewDataSource.swift */,
 				9519E6311F3729A800EA64E5 /* FlightCardView.swift */,
 				95CB8B721F372C340009EA25 /* Model.swift */,
-				AF433A0720723EAE00E6EAE2 /* ModelController.swift */,
+				AF905FBD208622C40028526D /* State and Storage */,
 				950DAEC41F35D35F001F878E /* Info.plist */,
 				AF251C3E207345C600551A4D /* PracticePlayground.playground */,
 			);
@@ -107,6 +109,15 @@
 				AF9202442080C79200FE2EDD /* FlightAPIRequest.swift */,
 			);
 			path = "FlightAPI Network Layer";
+			sourceTree = "<group>";
+		};
+		AF905FBD208622C40028526D /* State and Storage */ = {
+			isa = PBXGroup;
+			children = (
+				AF433A0720723EAE00E6EAE2 /* StorageController.swift */,
+				AF905FBE2086231E0028526D /* StateController.swift */,
+			);
+			path = "State and Storage";
 			sourceTree = "<group>";
 		};
 		AFCC2D6A207C85B200ED8081 /* Common Network Layer */ = {
@@ -199,9 +210,10 @@
 				950DAEBB1F35D35F001F878E /* FlightInfoViewController.swift in Sources */,
 				AFBA77CF2071368400C1DD08 /* FlightTableViewCell.swift in Sources */,
 				AFBA77CB207134FF00C1DD08 /* FlightTableView.swift in Sources */,
+				AF905FBF2086231E0028526D /* StateController.swift in Sources */,
 				9519E6321F3729A800EA64E5 /* FlightCardView.swift in Sources */,
 				950DAEB91F35D35F001F878E /* AppDelegate.swift in Sources */,
-				AF433A0820723EAE00E6EAE2 /* ModelController.swift in Sources */,
+				AF433A0820723EAE00E6EAE2 /* StorageController.swift in Sources */,
 				AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */,
 				95CB8B731F372C340009EA25 /* Model.swift in Sources */,
 				AFBA77D12071749800C1DD08 /* FlightTableViewDataSource.swift in Sources */,

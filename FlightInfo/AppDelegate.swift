@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
+//    private var stateController: StateController!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		UINavigationBar.appearance().tintColor = .white
@@ -27,6 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Fallback on earlier versions
         }
         
+        // Dependency injection with StateController
+        
+        let initialController = window?.rootViewController as! UINavigationController
+        let flightInfoViewController = initialController.viewControllers.first as! FlightInfoViewController
+        let stateController = StateController(storageController: StorageController())
+        flightInfoViewController.stateController = stateController
 		return true
 	}
 

@@ -1,5 +1,5 @@
 //
-//  ModelController.swift
+//  StorageController.swift
 //  FlightInfo
 //
 //  Created by Nayem BJIT on 4/2/18.
@@ -7,10 +7,12 @@
 //
 
 import Foundation
-class FlightDataController {
-    class func fetchFlights(completion: @escaping ([Flight], Error?)-> ()) {
+class StorageController {
+//    private var request: FlightsRequest<FlightsResource>?
+    func fetchFlights(completion: @escaping ([Flight], Error?)-> ()) {
         let flightsResource = FlightsResource()
         let flightsRequest = FlightsRequest(resource: flightsResource)
+//        request = flightsRequest
         flightsRequest.getFlights { (result) in
             switch result {
             case .success(let flightsContainer):
