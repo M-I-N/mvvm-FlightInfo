@@ -10,20 +10,13 @@ import UIKit
 
 class FlightTableView: UITableView {
     
-    private lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        // Set Center
-        let frame = self.bounds
-        let centerPoint = CGPoint(x: frame.midX, y: frame.midY)
-        activityIndicatorView.center = centerPoint
-        
-        self.addSubview(activityIndicatorView)
-        return activityIndicatorView
-    }()
+    private lazy var activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.separatorStyle = .none
+        self.backgroundView = activityIndicatorView
+        self.backgroundView?.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         activityIndicatorView.startAnimating()
     }
 
