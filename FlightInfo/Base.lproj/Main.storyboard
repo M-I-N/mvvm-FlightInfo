@@ -46,10 +46,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="259.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9su-Ph-giX">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9su-Ph-giX" customClass="DesignableUIView" customModule="FlightInfo" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="359" height="243.5"/>
                                                     <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZL-33-wbf" customClass="FlightCardView" customModule="FlightInfo" customModuleProvider="target">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZL-33-wbf" customClass="FlightCardView" customModule="FlightInfo" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="343" height="227.5"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o11-mi-RBa">
@@ -176,8 +176,8 @@
                                                                 <constraint firstAttribute="trailing" secondItem="o11-mi-RBa" secondAttribute="trailing" id="ecQ-s9-dLp"/>
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="10"/>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
@@ -200,17 +200,17 @@
                                                         <constraint firstAttribute="bottom" secondItem="RZL-33-wbf" secondAttribute="bottom" constant="8" id="Rua-k2-fka"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                                            <size key="value" width="0.0" height="1"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                                            <integer key="value" value="2"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="2"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                                             <real key="value" value="0.29999999999999999"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="10"/>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="1"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -257,10 +257,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxS-fh-LYR" customClass="FlightDetailsView" customModule="FlightInfo" customModuleProvider="target">
-                                <rect key="frame" x="10" y="74" width="355" height="516.5"/>
+                                <rect key="frame" x="10" y="74" width="355" height="492.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WtC-2U-oNT">
-                                        <rect key="frame" x="0.0" y="0.0" width="355" height="506.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WtC-2U-oNT">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="482.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ywp-wY-U3m" customClass="DesignableUIView" customModule="FlightInfo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="355" height="155.5"/>
@@ -389,7 +389,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDx-zL-hee" customClass="DesignableUIView" customModule="FlightInfo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="175.5" width="355" height="155.5"/>
+                                                <rect key="frame" x="0.0" y="163.5" width="355" height="155.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ze1-bZ-q9f" customClass="GradientView" customModule="FlightInfo" customModuleProvider="target">
                                                         <rect key="frame" x="5" y="5" width="345" height="145.5"/>
@@ -514,7 +514,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKo-bj-JiW" customClass="DesignableUIView" customModule="FlightInfo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="351" width="355" height="155.5"/>
+                                                <rect key="frame" x="0.0" y="327" width="355" height="155.5"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqI-H5-RMF" customClass="GradientView" customModule="FlightInfo" customModuleProvider="target">
                                                         <rect key="frame" x="5" y="5" width="345" height="145.5"/>
