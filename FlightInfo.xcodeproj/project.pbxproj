@@ -28,6 +28,7 @@
 		AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC2D6B207C86B400ED8081 /* APIResource.swift */; };
 		AFDA633720877F4C009A1A30 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA633620877F4C009A1A30 /* FlightDetailsViewController.swift */; };
 		AFDA633920877FA9009A1A30 /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA633820877FA9009A1A30 /* FlightDetailsView.swift */; };
+		AFDA633C208790B1009A1A30 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA633B208790B1009A1A30 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		AFCC2D6B207C86B400ED8081 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
 		AFDA633620877F4C009A1A30 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
 		AFDA633820877FA9009A1A30 /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
+		AFDA633B208790B1009A1A30 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		950DAEB71F35D35F001F878E /* FlightInfo */ = {
 			isa = PBXGroup;
 			children = (
+				AFDA633A20879099009A1A30 /* Custom Design */,
 				AF0F6F4F208125AF00D1CC50 /* FlightAPI Network Layer */,
 				AFCC2D6A207C85B200ED8081 /* Common Network Layer */,
 				950DAEBC1F35D35F001F878E /* Main.storyboard */,
@@ -136,6 +139,14 @@
 				AF92023E2080B58900FE2EDD /* APIError.swift */,
 			);
 			name = "Common Network Layer";
+			sourceTree = "<group>";
+		};
+		AFDA633A20879099009A1A30 /* Custom Design */ = {
+			isa = PBXGroup;
+			children = (
+				AFDA633B208790B1009A1A30 /* UIView+Extension.swift */,
+			);
+			path = "Custom Design";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				AF433A0820723EAE00E6EAE2 /* StorageController.swift in Sources */,
 				AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */,
 				95CB8B731F372C340009EA25 /* Model.swift in Sources */,
+				AFDA633C208790B1009A1A30 /* UIView+Extension.swift in Sources */,
 				AFDA633720877F4C009A1A30 /* FlightDetailsViewController.swift in Sources */,
 				AFBA77D12071749800C1DD08 /* FlightTableViewDataSource.swift in Sources */,
 				AF9202412080B86A00FE2EDD /* NetworkRequest.swift in Sources */,
