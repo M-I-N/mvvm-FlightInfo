@@ -32,5 +32,17 @@ class FlightInfoViewController: UIViewController {
         }
         
 	}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ToFlightDetails":
+            if let destination = segue.destination as? FlightDetailsViewController, let selectedRow = flightTableView.indexPathForSelectedRow?.row {
+                let flight = dataSource.flights[selectedRow]
+                destination.flight = flight
+            }
+        default:
+            break
+        }
+    }
 }
 

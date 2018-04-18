@@ -26,6 +26,8 @@
 		AFBA77CF2071368400C1DD08 /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA77CE2071368400C1DD08 /* FlightTableViewCell.swift */; };
 		AFBA77D12071749800C1DD08 /* FlightTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBA77D02071749800C1DD08 /* FlightTableViewDataSource.swift */; };
 		AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC2D6B207C86B400ED8081 /* APIResource.swift */; };
+		AFDA633720877F4C009A1A30 /* FlightDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA633620877F4C009A1A30 /* FlightDetailsViewController.swift */; };
+		AFDA633920877FA9009A1A30 /* FlightDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDA633820877FA9009A1A30 /* FlightDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		AFBA77CE2071368400C1DD08 /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
 		AFBA77D02071749800C1DD08 /* FlightTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewDataSource.swift; sourceTree = "<group>"; };
 		AFCC2D6B207C86B400ED8081 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		AFDA633620877F4C009A1A30 /* FlightDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsViewController.swift; sourceTree = "<group>"; };
+		AFDA633820877FA9009A1A30 /* FlightDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 				AFBA77D02071749800C1DD08 /* FlightTableViewDataSource.swift */,
 				9519E6311F3729A800EA64E5 /* FlightCardView.swift */,
 				95CB8B721F372C340009EA25 /* Model.swift */,
+				AFDA633620877F4C009A1A30 /* FlightDetailsViewController.swift */,
+				AFDA633820877FA9009A1A30 /* FlightDetailsView.swift */,
 				AF905FBD208622C40028526D /* State and Storage */,
 				950DAEC41F35D35F001F878E /* Info.plist */,
 				AF251C3E207345C600551A4D /* PracticePlayground.playground */,
@@ -212,10 +218,12 @@
 				AFBA77CB207134FF00C1DD08 /* FlightTableView.swift in Sources */,
 				AF905FBF2086231E0028526D /* StateController.swift in Sources */,
 				9519E6321F3729A800EA64E5 /* FlightCardView.swift in Sources */,
+				AFDA633920877FA9009A1A30 /* FlightDetailsView.swift in Sources */,
 				950DAEB91F35D35F001F878E /* AppDelegate.swift in Sources */,
 				AF433A0820723EAE00E6EAE2 /* StorageController.swift in Sources */,
 				AFCC2D6C207C86B400ED8081 /* APIResource.swift in Sources */,
 				95CB8B731F372C340009EA25 /* Model.swift in Sources */,
+				AFDA633720877F4C009A1A30 /* FlightDetailsViewController.swift in Sources */,
 				AFBA77D12071749800C1DD08 /* FlightTableViewDataSource.swift in Sources */,
 				AF9202412080B86A00FE2EDD /* NetworkRequest.swift in Sources */,
 				AF92023F2080B58900FE2EDD /* APIError.swift in Sources */,
