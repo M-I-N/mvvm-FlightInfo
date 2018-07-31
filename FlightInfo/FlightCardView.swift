@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class FlightCardView: UIView {
 	@IBOutlet private weak var airportSymbolsLabel: UILabel!
 	@IBOutlet private weak var departureDayLabel: UILabel!
@@ -17,6 +18,17 @@ class FlightCardView: UIView {
 	@IBOutlet private weak var durationLabel: UILabel!
 	@IBOutlet private weak var arrivalDayLabel: UILabel!
 	@IBOutlet private weak var arrivalAirportLabel: UILabel!
+    
+    @IBInspectable
+    var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0  // Needed for subviews' rounded corners
+        }
+    }
 	
 	var viewModel: ViewModel? {
 		didSet {

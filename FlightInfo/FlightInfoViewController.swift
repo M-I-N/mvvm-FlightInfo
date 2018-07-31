@@ -11,6 +11,9 @@ import UIKit
 class FlightInfoViewController: UIViewController {
     @IBOutlet private weak var flightTableView: FlightTableView!
     
+    var stateController: StateController!
+    private var dataSource: FlightTableViewDataSource!
+    
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -21,20 +24,26 @@ class FlightInfoViewController: UIViewController {
             // Fallback on earlier versions
         }
 
-        // Retrieve flights data from API
-        self.fetchFlightsInfo()
-
         flightTableView.estimatedRowHeight = 260
         flightTableView.rowHeight = UITableViewAutomaticDimension
+        stateController.whenStateDidChange = { [unowned self] (updatedStateController) in
+            self.dataSource = FlightTableViewDataSource(flights: updatedStateController.flights)
+            self.flightTableView.viewModel = FlightTableView.ViewModel(dataSource: self.dataSource)
+        }
+        
 	}
     
-    func fetchFlightsInfo() {
-        FlightDataController.fetchFlights { [weak self] (flights, error) in
-            guard let `self` = self else {
-                return
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ToFlightDetails":
+            if let destination = segue.destination as? FlightDetailsViewController, let selectedIndex = flightTableView.indexPathForSelectedRow {
+                flightTableView.deselectRow(at: selectedIndex, animated: true)
+                let selectedRow = selectedIndex.row
+                let flight = dataSource.flights[selectedRow]
+                destination.flight = flight
             }
-            let flightTableViewDataSource = FlightTableViewDataSource(flights: flights)
-            self.flightTableView.viewModel = FlightTableView.ViewModel(dataSource: flightTableViewDataSource)
+        default:
+            break
         }
     }
 }
